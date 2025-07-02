@@ -72,17 +72,18 @@ SWSSTAKING_ADDRESS=0x...
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
-> 📸 UI preview of the dApp in action:
+🖼️ UI preview of the dApp in action:
 
-![Wallet connected](./screenshots/wallet-connected.png)
-![Staking success](./screenshots/stake-success.png)
-![Claiming rewards](./screenshots/claim-reward.png)
-![Withdrawing tokens](./screenshots/withdraw-success.png)
-![Balance preview](./screenshots/balance-view.png)
-![All reward flows](./screenshots/reward-flow.png)
-![Verified contracts](./screenshots/contracts-verified.png)
+- [Wallet connected](./screenshots/wallet-connected.png)
+- [Staking success](./screenshots/staking-success.png)
+- [Claiming rewards](./screenshots/claim-rewards.png)
+- [Withdrawing tokens](./screenshots/withdraw-tokens.png)
+- [Balance preview](./screenshots/balance-preview.png)
+- [All reward flows](./screenshots/all-reward-flows.png)
+- [Verified contracts](./screenshots/verified-contracts.png)
+
 
 ---
 
