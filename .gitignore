@@ -1,0 +1,61 @@
+# Root .gitignore for SWS DeFi zkSync Era Project
+
+# Node.js
+
+node\_modules/
+dist/
+
+# Environment
+
+.env
+.env.local
+.env.\*.local
+
+# Hardhat / zkSync Era
+
+artifacts/
+artifacts-zk/
+cache/
+typechain/
+typechain-types/
+
+# Logs
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log\*
+yarn-error.log\*
+pnpm-debug.log\*
+lerna-debug.log\*
+
+# OS
+
+.DS\_Store
+Thumbs.db
+
+# IDEs
+
+.vscode/
+.idea/
+\*.suo
+*.ntvs*
+\*.njsproj
+\*.sln
+\*.sw?
+
+# Lock files (optional — keep if using)
+
+# package-lock.json
+
+# yarn.lock
+
+# pnpm-lock.yaml
+
+# Frontend build and env
+
+frontend/node\_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
