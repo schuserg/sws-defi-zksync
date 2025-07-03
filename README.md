@@ -91,7 +91,7 @@ SWSSTAKING_ADDRESS=0x...
 
 > 🚀 Optionally add link here if deployed online:
 
-**Live DApp**: [sws-defi-zksync.vercel.app](https://your-dapp-url-here) *(example)*
+**Live DApp**: [sws-defi-zksync.vercel.app](https://sws-defi-zksync-1q7yupnk-sergejs-projects-28ca4ef8.vercel.app/) *(live preview)*
 
 ---
 
