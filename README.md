@@ -134,16 +134,25 @@ npx hardhat run scripts/verify-tokens.ts --network zkSyncMainnet  # SWSToken_fla
 
 ---
 
-## 🧠 Backend (optional)
+## 📡 Backend (Listener)
 
-The `backend/` folder includes utilities like event listeners.
+A lightweight Python script (`listener.py`) listens to smart contract events on zkSync Era Mainnet and logs all interactions for monitoring and potential integration.
 
-### Listener
+### 🎯 Features:
+- Listens to events from the `SWSStaking` contract:
+  - `Staked(address user, uint256 amount)`
+  - `Claimed(address user, uint256 reward)`
+  - `Withdrawn(address user, uint256 amount)`
+- Saves logs to `backend/logs/mint_log.json`
+- Can be extended with:
+  - Telegram notifications  
+  - Analytics dashboard  
+  - Grant activity proofs (Layer3, Gitcoin, etc.)
 
-The script `listener.py` watches for smart contract events and logs them to `backend/logs/mint_log.json`.
-
+### ▶ How to run:
 ```bash
-python3 backend/listener.py
+cd backend
+python listener.py
 
 ---
 
