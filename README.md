@@ -179,6 +179,21 @@ python listener.py
 
 ---
 
+## ✅ GitHub Actions CI
+
+This project uses GitHub Actions for continuous integration.
+
+**Workflow:**
+- Lint checks
+- Frontend build test (Vite)
+- Hardhat compilation check
+
+CI workflow file: `.github/workflows/ci.yml`
+
+CI runs automatically on every push or pull request to ensure code integrity and deployment readiness.
+
+---
+
 ## License
 
 MIT © 2025 SWS DeFi Team
