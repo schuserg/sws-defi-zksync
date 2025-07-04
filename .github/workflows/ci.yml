@@ -9,12 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 📥 Checkout repository
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v3
 
-      - name: ⚙ Setup Node.js
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
@@ -26,7 +25,7 @@ jobs:
       - name: 🧪 Compile contracts (Hardhat)
         run: npx hardhat compile
 
-      - name: 🛠 Build frontend
+      - name: 🖼️ Build frontend
         run: |
           cd frontend
           npm install
