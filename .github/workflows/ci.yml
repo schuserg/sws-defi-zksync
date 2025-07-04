@@ -9,11 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
     steps:
       - name: 🧾 Checkout repository
         uses: actions/checkout@v3
 
-      - name: ⚙️ Setup Node.js
+      - name: ❄️ Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
@@ -22,7 +24,7 @@ jobs:
       - name: 📦 Install dependencies
         run: npm install
 
-      - name: 🧪 Compile contracts (Hardhat)
+      - name: 🛠️ Compile contracts (Hardhat)
         run: npx hardhat compile
 
       - name: 🖼️ Build frontend
