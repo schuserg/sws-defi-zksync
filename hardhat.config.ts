@@ -21,8 +21,8 @@ const config: HardhatUserConfig = {
       url: process.env.ZKSYNC_ERA_MAINNET_RPC || "",
       ethNetwork: process.env.ETH_MAINNET_RPC || "",
       zksync: true,
-      // В .env ключ должен быть без префикса 0x
-      accounts: [process.env.PRIVATE_KEY || ""],
+      // 🛠 Use key if present, else empty array (avoids CI errors)
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
   },
   solidity: {
