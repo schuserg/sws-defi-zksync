@@ -9,11 +9,7 @@ dotenv.config();
 
 const config: HardhatUserConfig = {
   zksolc: {
-    compilerSource: "binary",
-    settings: {
-      // Укажи путь до локального бинарника zksolc (у тебя он лежит в корне)
-      compilerPath: "./zksolc-linux-amd64-gnu-v1.5.15",
-    },
+    compilerSource: "docker", // ✅ Use official Docker-based zksolc
   },
   defaultNetwork: "zkSyncMainnet",
   networks: {
@@ -21,7 +17,7 @@ const config: HardhatUserConfig = {
       url: process.env.ZKSYNC_ERA_MAINNET_RPC || "",
       ethNetwork: process.env.ETH_MAINNET_RPC || "",
       zksync: true,
-      // 🛠 Use key if present, else empty array (avoids CI errors)
+      // % Use key if present, else empty array (avoids CI errors)
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
   },

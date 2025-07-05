@@ -24,10 +24,10 @@ jobs:
       - name: 📦 Install dependencies
         run: npm install
 
-      - name: 🛠️ Compile contracts (Hardhat)
+      - name: ✍️ Compile contracts (Hardhat)
         run: npx hardhat compile
 
-      - name: 🖼️ Build frontend
+      - name: 🧱 Build frontend
         run: |
           cd frontend
           npm install
