@@ -9,7 +9,11 @@ dotenv.config();
 
 const config: HardhatUserConfig = {
   zksolc: {
-    compilerSource: "docker", // ✅ Use official Docker-based zksolc
+    compilerSource: "binary",
+    settings: {
+      // Specify path to local zksolc binary
+      compilerPath: "./zksolc-linux-amd64-gnu-v1.5.15",
+    },
   },
   defaultNetwork: "zkSyncMainnet",
   networks: {
@@ -17,7 +21,7 @@ const config: HardhatUserConfig = {
       url: process.env.ZKSYNC_ERA_MAINNET_RPC || "",
       ethNetwork: process.env.ETH_MAINNET_RPC || "",
       zksync: true,
-      // % Use key if present, else empty array (avoids CI errors)
+      // Use key if present, else empty array (avoids CI errors)
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
   },
@@ -31,4 +35,3 @@ const config: HardhatUserConfig = {
 };
 
 export default config;
-

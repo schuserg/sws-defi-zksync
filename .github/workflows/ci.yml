@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      ZKSYNC_ERA_MAINNET_RPC: ${{ secrets.ZKSYNC_ERA_MAINNET_RPC }}
+      ETH_MAINNET_RPC: ${{ secrets.ETH_MAINNET_RPC }}
     steps:
       - name: 🧾 Checkout repository
         uses: actions/checkout@v3
@@ -21,10 +23,10 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: 📦 Install dependencies
+      - name: 🍞 Install dependencies
         run: npm install
 
-      - name: ✍️ Compile contracts (Hardhat)
+      - name: 🖋 Compile contracts (Hardhat)
         run: npx hardhat compile
 
       - name: 🧱 Build frontend
