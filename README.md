@@ -2,8 +2,6 @@
 
 A complete DeFi staking project deployed on zkSync Era Mainnet. Users can stake SWST tokens and earn DOL reward tokens via the SWSStaking contract. Fully verified, frontend-connected, and ready for use.
 
-[![Open App](https://img.shields.io/badge/Launch%20App-zksync-blue?logo=ethereum)](https://your-dapp-url-here)
-
 ---
 
 ## Overview
@@ -191,6 +189,28 @@ This project uses GitHub Actions for continuous integration.
 CI workflow file: `.github/workflows/ci.yml`
 
 CI runs automatically on every push or pull request to ensure code integrity and deployment readiness.
+
+---
+
+## 🧹 ESLint (Code Quality)
+
+We use **ESLint v9.x** with Flat Config and React + TypeScript rules.
+
+### 📦 Run lint check:
+
+```bash
+npm run lint
+```
+
+### ✅ Features:
+- Based on `@eslint/js` and `eslint-plugin-react`
+- Compatible with Flat Config system (ESLint 9+)
+- Handles both `.js` / `.ts` and `.jsx` / `.tsx` files
+- Auto-detects React version
+- Ignores `node_modules`, `dist`, `venv`, etc.
+
+### 📄 Config location:
+`eslint.config.js` in root directory
 
 ---
 

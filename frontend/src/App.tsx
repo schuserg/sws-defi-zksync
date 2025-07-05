@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ethers } from "ethers";
 import stakingAbi from "./abi/SWSStaking.abi.json";
 import swsAbi from "./abi/SWSToken.abi.json";
