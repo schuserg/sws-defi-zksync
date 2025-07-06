@@ -1,3 +1,4 @@
+/* eslint-env node */
 const { config: dotenv } = require("dotenv");
 dotenv();
 

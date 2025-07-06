@@ -38,6 +38,18 @@ export default [
     },
   },
   {
+    // ✅ Specific configuration for .cjs files (e.g., hardhat.config.cjs)
+    files: ['**/*.cjs'],
+    languageOptions: {
+      globals: {
+        process: 'readonly',
+        __dirname: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+      },
+    },
+  },
+  {
     ignores: [
       'node_modules/**',
       'dist/**',
