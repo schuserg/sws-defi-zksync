@@ -192,11 +192,11 @@ CI runs automatically on every push or pull request to ensure code integrity and
 
 ---
 
-### 🛠 Hardhat config in ESM
+### ⚙ Hardhat config in ESM
 
-We use `hardhat.config.ts` directly in ESM mode (`"type": "module"` in `package.json`).
+We use `hardhat.config.ts` via `.js` proxy (`hardhat.config.js`) using `ts-node/register`.
 
-> No `hardhat.config.js` proxy is needed for CLI or CI – just run `npx hardhat compile` as usual.
+> This allows Hardhat CLI and CI (`npx hardhat compile`) to work inside ESM project.
 
 ---
 
