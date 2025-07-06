@@ -26,8 +26,8 @@ jobs:
       - name: 🍞 Install dependencies
         run: npm install
 
-      - name: 📦 Compile contracts (Hardhat)
-        run: npx hardhat compile
+      - name: 🧪 Compile contracts (Hardhat)
+        run: npx hardhat --config hardhat.config.cjs compile
 
       - name: 🧱 Build frontend
         run: |
