@@ -188,7 +188,7 @@ This project uses GitHub Actions for continuous integration.
 
 CI workflow file: `.github/workflows/ci.yml`
 
-> ⚙️ TypeScript config is proxied via `hardhat.config.js`, which loads `ts-node/register` and imports `hardhat.config.ts`. This avoids ESM import errors in CI.
+> ✅ TypeScript config is proxied via `hardhat.config.js` using `ts-node/register`. This allows working with `type: "module"` in `package.json` (required by ESLint).
 
 CI runs automatically on every push or pull request to ensure code integrity and deployment readiness.
 
