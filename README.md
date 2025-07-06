@@ -188,7 +188,7 @@ This project uses GitHub Actions for continuous integration.
 
 CI workflow file: `.github/workflows/ci.yml`
 
-> Note: TypeScript config is loaded via `hardhat.config.cjs` for compatibility with Hardhat CLI.
+> Note: We use TypeScript config via `hardhat.config.js` + `ts-node/register`, which allows Hardhat to load `hardhat.config.ts` in ESM projects with `"type": "module"` in `package.json`.
 
 CI runs automatically on every push or pull request to ensure code integrity and deployment readiness.
 
