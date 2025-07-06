@@ -182,9 +182,9 @@ python listener.py
 This project uses GitHub Actions for continuous integration.
 
 **Workflow:**
-- Lint checks
-- Frontend build test (Vite)
-- Hardhat compilation check
+- Lint checks  
+- Frontend build test (Vite)  
+- Hardhat compilation check  
 
 CI workflow file: `.github/workflows/ci.yml`
 
@@ -192,7 +192,6 @@ CI runs automatically on every push or pull request to ensure code integrity and
 
 ---
 
-```md
 ### ⚙ Hardhat config in CommonJS
 
 We use `hardhat.config.cjs` with CommonJS syntax.
@@ -203,7 +202,7 @@ inside an ESM project (`"type": "module"` in `package.json`).
 ✅ Compatible with both local CLI and CI:
 
 ```bash
-npx hardhat compile
+npx hardhat --config hardhat.config.cjs compile
 
 ---
 
@@ -215,6 +214,7 @@ We use **ESLint v9.x** with Flat Config and React + TypeScript rules.
 
 ```bash
 npm run lint
+
 ```
 
 ### ✅ Features:
