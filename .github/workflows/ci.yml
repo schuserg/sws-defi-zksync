@@ -26,9 +26,8 @@ jobs:
       - name: 🍞 Install dependencies
         run: npm install
 
-      - name: Compile contracts (Hardhat)
-        run: |
-          node --loader ts-node/esm node_modules/hardhat/internal/cli/cli.js compile
+      - name: 📦 Compile contracts (Hardhat)
+        run: npx hardhat compile
 
       - name: 🧱 Build frontend
         run: |
