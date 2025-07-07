@@ -229,6 +229,41 @@ npm run lint
 
 ---
 
+## 📲 Telegram Alerts
+
+The backend listener sends real-time alerts to Telegram upon detecting events in the `SWSStaking` contract.
+
+### 🔔 Events Tracked:
+- `Staked`
+- `Claimed`
+- `Withdrawn`
+- `WithdrawnAll`
+
+### 📄 How It Works:
+- The script uses the `TELEGRAM_BOT_TOKEN` and `TELEGRAM_INTERNAL_CHAT_ID` from `.env`
+- Formats and sends structured event messages
+- Supports emoji-rich formatting and timestamps
+
+### 🔧 Setup `.env`:
+```env
+TELEGRAM_BOT_TOKEN=your_bot_token
+TELEGRAM_INTERNAL_CHAT_ID=your_chat_id
+```
+
+> Example output:
+```
+📬 Claimed:
+🧑 User: 0xABC...
+💰 Reward: 123.0
+🧱 Block: 6257000
+🔗 Tx: 0xabc123...
+🕒 Time: 2025-07-07T12:34:56Z
+```
+
+Telegram bot must be created via [@BotFather](https://t.me/BotFather) and added to your group/channel.
+
+---
+
 ## License
 
 MIT © 2025 SWS DeFi Team
