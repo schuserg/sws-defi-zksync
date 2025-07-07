@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest python-dotenv web3 python-telegram-bot
+        pip install pytest python-dotenv web3 python-telegram-bot fastapi
 
     - name: Run tests
       run: |
