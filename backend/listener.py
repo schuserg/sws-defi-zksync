@@ -7,9 +7,12 @@ from web3 import Web3
 from eth_utils import keccak
 from telegram import Bot
 import asyncio
+import requests  
 
 # Load environment variables
 load_dotenv()
+
+DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK")
 WEB3_PROVIDER = os.getenv("ZKSYNC_ERA_MAINNET_RPC")
 STAKING_ADDRESS = os.getenv("SWSSTAKING_ADDRESS")
 TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -51,6 +54,14 @@ def save_log(entry):
 
 # Telegram bot
 bot = Bot(token=TG_TOKEN)
+
+# Discord alert
+def send_discord_alert(text):
+    if DISCORD_WEBHOOK:
+        try:
+            requests.post(DISCORD_WEBHOOK, json={"content": text})
+        except Exception as e:
+            print("⚠️ Discord Error:", e)
 
 # Start listening
 start_block = w3.eth.block_number
@@ -104,6 +115,8 @@ async def main():
                         await bot.send_message(chat_id=TG_CHAT_ID, text=msg)
                     except Exception as tg_err:
                         print("⚠️ Telegram Error:", tg_err)
+
+                    send_discord_alert(msg)  # ⬅ Discord уведомление
 
             except Exception as log_err:
                 print(f"⚠️ Log Read Error: '{event_name}'", log_err)

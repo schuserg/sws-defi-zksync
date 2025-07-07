@@ -314,6 +314,45 @@ The frontend will fetch data from this endpoint and display it at /dashboard
 
 ---
 
+🔔 Discord Alerts
+
+In addition to Telegram notifications, the project supports Discord webhook alerts for key events:
+
+- Works via `listener.py` and posts to your selected Discord channel via Webhook
+- Supports events: `Staked`, `Claimed`, `Withdrawn`, `WithdrawnAll`
+- Sends embedded messages with full context (user, amount, reward, block, tx, timestamp)
+- Uses `DISCORD_WEBHOOK` from `.env`
+
+To enable:
+1. Open your Discord server settings → **Integrations** → **Webhooks** → **New Webhook**
+2. Copy the webhook URL and paste into `.env`:
+
+```env
+DISCORD_WEBHOOK=https://discord.com/api/webhooks/....
+Run the listener:
+
+bash
+Kopieren
+Bearbeiten
+pm2 start backend/listener.py --interpreter=python3 --name sws-listener
+Example output in Discord:
+
+text
+Kopieren
+Bearbeiten
+📢 Claimed:
+👤 User: 0xABC...
+💰 Reward: 123.0
+📦 Amount: N/A
+🔢 Block: 6250000
+🔗 Tx: 0xabc123...
+🕒 Time: 2025-07-07T12:34:56Z
+yaml
+Kopieren
+Bearbeiten
+
+---
+
 ## License
 
 MIT © 2025 SWS DeFi Team
