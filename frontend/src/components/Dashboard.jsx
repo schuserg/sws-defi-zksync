@@ -16,7 +16,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8000/logs")
+    fetch("/api/logs")
       .then((res) => res.json())
       .then((data) => {
         setLogs(data.logs);
