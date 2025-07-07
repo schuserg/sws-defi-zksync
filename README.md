@@ -264,6 +264,29 @@ Telegram bot must be created via [@BotFather](https://t.me/BotFather) and added 
 
 ---
 
+📡 Event Listener & Alerts
+The project includes an asynchronous event listener (backend/listener.py) that tracks smart contract activity on zkSync Era Mainnet.
+
+⛓ Listens to Staked, Claimed, Withdrawn, WithdrawnAll events
+
+📝 Logs events to logs/mint_log.json
+
+📬 Sends real-time Telegram alerts via bot
+
+🔁 Runs continuously via PM2 (configured to auto-start on reboot)
+
+To run locally:
+
+bash
+Kopieren
+Bearbeiten
+cd backend
+pm2 start listener.py --interpreter=python3 --name sws-listener
+pm2 save
+pm2 startup
+
+---
+
 ## License
 
 MIT © 2025 SWS DeFi Team
