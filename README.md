@@ -287,6 +287,33 @@ pm2 startup
 
 ---
 
+📊 Analytics Dashboard
+
+The project includes a professional analytics dashboard to visualize smart contract activity:
+
+- Built with React and Recharts
+- Fetches real-time data via FastAPI backend
+- Displays:
+  - Distribution of events (Staked, Claimed, Withdrawn, WithdrawnAll)
+  - Total claimed rewards over time
+  - Full chronological event log (user, txHash, timestamp)
+- Reads data from `mint_log.json` via API (`/logs` endpoint)
+
+Example:
+
+![dashboard](./screenshots/dashboard_example.png) <!-- Добавь сюда скриншот при желании -->
+
+To run locally:
+
+```bash
+cd backend
+uvicorn api:app --reload --port 8000
+Then open http://localhost:8000/logs or Swagger UI: http://localhost:8000/docs
+
+The frontend will fetch data from this endpoint and display it at /dashboard
+
+---
+
 ## License
 
 MIT © 2025 SWS DeFi Team
