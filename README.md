@@ -360,6 +360,25 @@ Bearbeiten
 
 ---
 
+## 🧪 Python Backend Tests
+
+This project uses **GitHub Actions** to run automated tests on each push or pull request.
+The tests are written using `unittest` and run with `pytest`.
+
+**Features:**
+- Tests the `format_amount()` utility used in the backend.
+- Ensures backend logic is robust before deployment.
+- CI pipeline installs `fastapi`, `web3`, `python-telegram-bot`, and more.
+
+Run locally:
+
+```bash
+cd backend
+pytest tests
+```
+
+---
+
 ## License
 
 MIT © 2025 SWS DeFi Team
