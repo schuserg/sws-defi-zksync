@@ -20,5 +20,8 @@ jobs:
         pip install pytest python-dotenv web3 python-telegram-bot
 
     - name: Run tests
-      run: pytest backend/tests
+      run: |
+        export PYTHONPATH="${{ github.workspace }}"
+        pytest backend/tests
+
 

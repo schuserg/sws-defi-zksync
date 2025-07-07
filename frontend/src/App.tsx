@@ -1,6 +1,7 @@
-// import { useEffect, useState } from "react";
 import { useState } from "react";
 import { ethers } from "ethers";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
 import stakingAbi from "./abi/SWSStaking.abi.json";
 import swsAbi from "./abi/SWSToken.abi.json";
 import addresses from "./deployed_addresses.json";
@@ -26,7 +27,6 @@ export default function App() {
       setSwsContract(sws);
       setStakingContract(staking);
 
-      // Approve max tokens once
       try {
         const tx = await sws.approve(addresses.SWSSTAKING_ADDRESS, ethers.MaxUint256);
         await tx.wait();
@@ -107,25 +107,38 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>🔥 zkSync Staking DApp</h2>
-      <button onClick={connectWallet}>🔗 Connect Wallet</button>
-      <br /><br />
-      <input
-        type="text"
-        placeholder="Enter amount"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-      />
-      <br /><br />
-      <button onClick={stake}>🔥 Stake</button>
-      <button onClick={claim}>🎁 Claim</button>
-      <button onClick={withdraw}>💵 Withdraw</button>
-      <button onClick={withdrawAll}>🧹 Withdraw All</button>
-      <br /><br />
-      <button onClick={refreshBalance}>🔄 Refresh Balance</button>
-      <p>{message}</p>
-    </div>
+    <Router>
+      <div style={{ padding: "20px" }}>
+        <h2>🔥 zkSync Staking DApp</h2>
+        <nav style={{ marginBottom: "20px" }}>
+          <Link to="/" style={{ marginRight: "10px" }}>🏠 Home</Link>
+          <Link to="/dashboard">📊 Dashboard</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={
+            <div>
+              <button onClick={connectWallet}>🔗 Connect Wallet</button>
+              <br /><br />
+              <input
+                type="text"
+                placeholder="Enter amount"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+              />
+              <br /><br />
+              <button onClick={stake}>🔥 Stake</button>
+              <button onClick={claim}>🎁 Claim</button>
+              <button onClick={withdraw}>💵 Withdraw</button>
+              <button onClick={withdrawAll}>🧹 Withdraw All</button>
+              <br /><br />
+              <button onClick={refreshBalance}>🔄 Refresh Balance</button>
+              <p>{message}</p>
+            </div>
+          } />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
