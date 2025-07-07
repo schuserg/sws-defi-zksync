@@ -52,10 +52,17 @@ Set up `.env` file:
 ZKSYNC_ERA_MAINNET_RPC=https://zksync-mainnet.g.alchemy.com/v2/YOUR_KEY
 ETH_MAINNET_RPC=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
 PRIVATE_KEY=your_wallet_private_key
-PUBLIC_KEY=your_public_address
+PUBLIC_KEY=0xYourPublicAddress
+
 SWSTOKEN_ADDRESS=0x...
 DOLTOKEN_ADDRESS=0x...
 SWSSTAKING_ADDRESS=0x...
+
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_INTERNAL_CHAT_ID=your_internal_chat_id
+TELEGRAM_PUBLIC_CHAT_ID=
+
+DISCORD_WEBHOOK=https://discord.com/api/webhooks/your_webhook_url
 ```
 
 ---
