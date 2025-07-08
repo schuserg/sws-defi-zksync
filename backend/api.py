@@ -31,3 +31,8 @@ def get_logs():
 
 def format_amount(value):
     return float(value) / 1e18 if isinstance(value, int) else value
+    
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("api:app", host="0.0.0.0", port=8000)
+
