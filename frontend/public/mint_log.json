@@ -1,0 +1,282 @@
+[
+  {
+    "event": "Staked",
+    "block": 62325322,
+    "txHash": "07df0bab5c98f35d08c01f73b37227c33641f62212a81c1b994772af96c34e75",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 200.0
+    },
+    "timestamp": "2025-06-30T10:05:18.678491Z"
+  },
+  {
+    "event": "Withdrawn",
+    "block": 62325339,
+    "txHash": "aefcf3a540d4735e280200fcfbcee75b1e470d2b0aa88c6ddafc77775e9be371",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-06-30T10:05:58.455495Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62325352,
+    "txHash": "32e317d4c7436c41bddf95ab65643eeb33cc090e2232e86a49e048a01321b3b1",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 13.0
+    },
+    "timestamp": "2025-06-30T10:06:26.475039Z"
+  },
+  {
+    "event": "WithdrawnAll",
+    "block": 62325370,
+    "txHash": "7b86ccd1ee6eb298fcd73c00586d4136c53f787c314d7613b85870c07360c22a",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-06-30T10:07:00.654139Z"
+  },
+  {
+    "event": "Staked",
+    "block": 62437988,
+    "txHash": "f9174c31be60fdc2b63af18618e2d52015f187d63df2cf9a90e62f92e592e853",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 300.0
+    },
+    "timestamp": "2025-07-03T09:39:57.646185Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62546322,
+    "txHash": "4f6d7fc3ff542945555dd1eb56ce1a850a1452aea2c1e5db1bb243112b750611",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 24459.0
+    },
+    "timestamp": "2025-07-06T15:42:31.268236Z"
+  },
+  {
+    "event": "WithdrawnAll",
+    "block": 62568693,
+    "txHash": "f5a31918da1e8a71a7cf49128b4fc785ea304f988416ed07450211b1f6a34c86",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-07-07T08:00:32.708985Z"
+  },
+  {
+    "event": "Staked",
+    "block": 62568703,
+    "txHash": "f57364ce58412e1724f66705ac7f0693bc284153a29e1e0c9d6e211fd5f67561",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-07-07T08:00:43.601934Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62571297,
+    "txHash": "026804ecf7e96d8caddf7c4337476f617ee2dc7ab49f9e1899c649c380e5ace6",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 2594.0
+    },
+    "timestamp": "2025-07-07T09:27:58.907361Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62571371,
+    "txHash": "09d7ccf5681e18018a4f82a00aafd2ae7b3b16cd22553352dd3a1454b2b35505",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 74.0
+    },
+    "timestamp": "2025-07-07T09:30:26.782817Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62571641,
+    "txHash": "d075067948aa9ef40679b89efcfb729dd239d1e67672994f1e8f2cd3877a38b1",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 270.0
+    },
+    "timestamp": "2025-07-07T09:42:06.813942Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62571730,
+    "txHash": "f79c78f37aeebe4f91d761b7def6c2acebdfee5dd9ed0ec15e1907f3d315027f",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 89.0
+    },
+    "timestamp": "2025-07-07T09:46:28.101858Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62572102,
+    "txHash": "6b5645e8f9c7f8608630df7af48f418860537dc60ba264e510b94a68d2eeadfb",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 372.0
+    },
+    "timestamp": "2025-07-07T10:00:54.390749Z"
+  },
+  {
+    "event": "WithdrawnAll",
+    "block": 62572119,
+    "txHash": "9382d7b7b59eb41bb4f43425413be91d93f4296dd9adb716a520f2ba388e0507",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-07-07T10:01:28.125929Z"
+  },
+  {
+    "event": "Staked",
+    "block": 62572217,
+    "txHash": "683ea5951fee49b269022281979c32b0190b458feda8bb6deafafd7d64a0fd25",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-07-07T10:05:01.719179Z"
+  },
+  {
+    "event": "Staked",
+    "block": 62572259,
+    "txHash": "722f66bd8fdefda11bbbecdea563d91aad3cc22437a7a7f64b462a36462162ba",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 10.0
+    },
+    "timestamp": "2025-07-07T10:06:09.174814Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62572272,
+    "txHash": "75806054dcd20cc00bf172e9f40d9ca65d50210356ef456664474349bc50f758",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 55.0
+    },
+    "timestamp": "2025-07-07T10:06:38.393249Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62572458,
+    "txHash": "30060331ecbc5643874f61526e3e39310028aa74bc1b2b806bc455a72f6165a5",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 186.0
+    },
+    "timestamp": "2025-07-07T10:13:51.184471Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62572684,
+    "txHash": "80c639535cf1cddd68bc599c61e2b2471d2e72c2e4370d7fe3a4fe7fb68bd422",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 226.0
+    },
+    "timestamp": "2025-07-07T10:22:42.088204Z"
+  },
+  {
+    "event": "WithdrawnAll",
+    "block": 62575324,
+    "txHash": "6c7e631157647adc1a5e97e30308c10626ca2ac9db027a9616c6fc2475ee1aae",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 110.0
+    },
+    "timestamp": "2025-07-07T12:21:05.664805Z"
+  },
+  {
+    "event": "Staked",
+    "block": 62575382,
+    "txHash": "7d5af9e06bd149eb436d5cb866be620bc2af8ad8ea7b69dc79fe8a22714f7b21",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-07-07T12:23:21.981727Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62575669,
+    "txHash": "b28813bc2c4affda801b7218c2c90bbe6a4d37e976b149a46ec3aec6fb4c1e2a",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 287.0
+    },
+    "timestamp": "2025-07-07T12:35:42.830725Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62576691,
+    "txHash": "748cdd158c6d17db5f7302025b5da2e606056be83940737361056ef7aa35c924",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 1022.0
+    },
+    "timestamp": "2025-07-07T13:18:53.296770Z"
+  },
+  {
+    "event": "WithdrawnAll",
+    "block": 62577884,
+    "txHash": "3d35bb2070cdc041fb5eab80e9dbef44da7b69fe57c00f93d27c4e773cc93c7f",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-07-07T13:58:10.267736Z"
+  },
+  {
+    "event": "Staked",
+    "block": 62582272,
+    "txHash": "3f278075ca5a10d3f06e0ba5abe15010f25d1c59cb14f758937a505949044a85",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "amount": 100.0
+    },
+    "timestamp": "2025-07-07T16:34:11.974762Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62583536,
+    "txHash": "da7d4cf502b1a676d3ab684d759e727666d7441c12689d4621d5a8966eb2ced4",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 1264.0
+    },
+    "timestamp": "2025-07-07T17:17:51.759324Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62605617,
+    "txHash": "8a59527b317be1ef7c964a72d804eac2231378dc038e8f9a79f6282fc9b4e3fb",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 22081.000000000004
+    },
+    "timestamp": "2025-07-08T09:51:45.583859Z"
+  },
+  {
+    "event": "Claimed",
+    "block": 62610965,
+    "txHash": "dc05da7d678f0244d1354bc9541fd2abd0d4dbb165392851ddcebfd744e3a408",
+    "args": {
+      "user": "0xA606170B30B0C2533Cbf7d29AB064390595748b9",
+      "reward": 5348.0
+    },
+    "timestamp": "2025-07-08T13:43:41.615825Z"
+  }
+]

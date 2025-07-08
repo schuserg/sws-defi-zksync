@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:match*",
+      "destination": "http://localhost:8000/api/:match*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
