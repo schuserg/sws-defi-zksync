@@ -1,22 +1,19 @@
 import { useEffect, useState } from "react";
 import {
-  BarChart,
-  Bar,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  CartesianGrid,
-  ResponsiveContainer,
+  BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip,
+  CartesianGrid, ResponsiveContainer
 } from "recharts";
 
 export default function Dashboard() {
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const backendUrl = import.meta.env.PROD
+    ? "https://your-backend.vercel.app/logs"  
+    : "/logs"; 
+
   useEffect(() => {
-    fetch("/logs")
+    fetch(backendUrl)
       .then((res) => res.json())
       .then((data) => {
         setLogs(data.logs);
