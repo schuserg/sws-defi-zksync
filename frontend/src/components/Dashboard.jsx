@@ -16,15 +16,14 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/mint_log.json")
+    fetch("/logs")
       .then((res) => res.json())
       .then((data) => {
-        setLogs(data); // <= корректно, т.к. JSON — массив
+        setLogs(data.logs);
         setLoading(false);
       })
-      .catch((err) => {
-        console.error("Failed to load logs:", err);
-        setLoading(false);
+      .catch((error) => {
+        console.error("Failed to load logs:", error);
       });
   }, []);
 
