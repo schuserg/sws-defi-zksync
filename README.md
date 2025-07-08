@@ -89,7 +89,6 @@ DISCORD_WEBHOOK=https://discord.com/api/webhooks/your_webhook_url
 - [All reward flows](./screenshots/all-reward-flows.png)
 - [Verified contracts](./screenshots/verified-contracts.png)
 
-
 ---
 
 ## DApp Access
@@ -284,40 +283,87 @@ The project includes an asynchronous event listener (backend/listener.py) that t
 
 To run locally:
 
-bash
-Kopieren
-Bearbeiten
+```bash
 cd backend
 pm2 start listener.py --interpreter=python3 --name sws-listener
 pm2 save
 pm2 startup
+```
 
 ---
 
-📊 Analytics Dashboard
+## 📊 Analytics Dashboard
 
-The project includes a professional analytics dashboard to visualize smart contract activity:
+The project includes a full-featured analytics dashboard to visualize smart contract activity on zkSync Era Mainnet.
 
-- Built with React and Recharts
-- Fetches real-time data via FastAPI backend
-- Displays:
-  - Distribution of events (Staked, Claimed, Withdrawn, WithdrawnAll)
-  - Total claimed rewards over time
-  - Full chronological event log (user, txHash, timestamp)
-- Reads data from `mint_log.json` via API (`/logs` endpoint)
+### 🧱 Built With:
 
-Example:
+* **React + Recharts**: Interactive data visualization
+* **Telegram API integration**: Real-time events fetched from a Telegram group/channel
+* **Serverless fetch via `/api/telegram.js`**: Compatible with Vercel frontend
+* **No backend deployment required** (FastAPI/uvicorn no longer needed)
 
-![dashboard](./screenshots/dashboard_example.png) <!-- Добавь сюда скриншот при желании -->
+### 📈 Dashboard Shows:
 
-To run locally:
+* Distribution of events: `Staked`, `Claimed`, `Withdrawn`, `WithdrawnAll`
+* Claimed rewards over time (if available)
+* Real-time event log:
+
+  * User address
+  * Event type
+  * Token amount
+  * Reward
+  * Tx hash
+  * Timestamp (ISO format)
+
+> ✅ Telegram bot logs events via `listener.py`
+> ✅ Events are pushed into a private group
+> ✅ Frontend reads public messages and displays them beautifully
+
+---
+
+### ✨ Online Access
+
+Dashboard is fully live at:
+
+**[https://sws-defi-zksync.vercel.app/dashboard](https://sws-defi-zksync.vercel.app/dashboard)**
+
+You can freely switch between **Home** and **Dashboard** tabs.
+
+---
+
+### ⚙️ How It Works
+
+1. `listener.py` logs on-chain events and sends formatted messages to Telegram.
+2. The frontend script `frontend/api/telegram.js` fetches the latest 20–30 messages.
+3. `Dashboard.jsx` parses and renders:
+
+   * Event distribution chart
+   * Claimed rewards chart
+   * Chronological log with icons and context
+
+> 🔐 No access to private keys or .env is required on frontend side.
+> 📡 Listener runs in background on your own server or dev machine.
+
+---
+
+### 🛠️ Optional Local Setup (Advanced)
+
+To simulate full behavior locally (with FastAPI):
 
 ```bash
 cd backend
 uvicorn api:app --reload --port 8000
-Then open http://localhost:8000/logs or Swagger UI: http://localhost:8000/docs
+# Open: http://localhost:8000/logs or http://localhost:8000/docs
+```
 
-The frontend will fetch data from this endpoint and display it at /dashboard
+Then update `Dashboard.jsx`:
+
+```js
+fetch("http://localhost:8000/logs")
+```
+
+Or fallback to static JSON from `public/logs/mint_log.json`.
 
 ---
 
@@ -338,15 +384,11 @@ To enable:
 DISCORD_WEBHOOK=https://discord.com/api/webhooks/....
 Run the listener:
 
-bash
-Kopieren
-Bearbeiten
+```bash
 pm2 start backend/listener.py --interpreter=python3 --name sws-listener
+```
 Example output in Discord:
-
-text
-Kopieren
-Bearbeiten
+```
 📢 Claimed:
 👤 User: 0xABC...
 💰 Reward: 123.0
@@ -354,9 +396,6 @@ Bearbeiten
 🔢 Block: 6250000
 🔗 Tx: 0xabc123...
 🕒 Time: 2025-07-07T12:34:56Z
-yaml
-Kopieren
-Bearbeiten
 
 ---
 
