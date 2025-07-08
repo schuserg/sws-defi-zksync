@@ -1,6 +1,6 @@
-/* global process */
 // frontend/api/telegram.js
 /* eslint-env node */
+/* global process */
 
 import fetch from 'node-fetch';
 
