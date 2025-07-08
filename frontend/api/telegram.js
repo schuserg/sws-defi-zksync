@@ -1,3 +1,6 @@
+// frontend/api/telegram.js
+/* eslint-env node */
+
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
@@ -15,7 +18,7 @@ export default async function handler(req, res) {
     const data = await response.json();
 
     const messages = (data.result || [])
-      .filter(m => m.message?.chat?.id == chatId)
+      .filter(m => m.message?.chat?.id === chatId)
       .map(m => ({
         date: new Date(m.message.date * 1000).toLocaleString(),
         text: m.message.text,
