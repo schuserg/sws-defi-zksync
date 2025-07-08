@@ -1,3 +1,4 @@
+/* global process */
 // frontend/api/telegram.js
 /* eslint-env node */
 
