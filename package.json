@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.28.0",
     "@babel/eslint-parser": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
     "@eslint/js": "^9.30.1",
@@ -20,7 +21,7 @@
     "@matterlabs/hardhat-zksync-solc": "^1.4.0",
     "@matterlabs/hardhat-zksync-verify": "^1.8.1",
     "@types/node": "^24.0.10",
-    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@typescript-eslint/parser": "^8.35.1",
     "dotenv": "^17.0.0",
     "eslint": "^9.30.1",
@@ -29,6 +30,7 @@
     "hardhat": "^2.25.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0",
     "vite": "^7.0.2"
   },
   "dependencies": {
