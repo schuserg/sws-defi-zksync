@@ -1,5 +1,5 @@
 import unittest
-from backend.api import format_amount  
+from ..api import format_amount 
 
 class TestFormatAmount(unittest.TestCase):
     def test_format_integer(self):
