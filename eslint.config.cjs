@@ -89,7 +89,7 @@ module.exports = [
   
   // ✅ Node.js global support for API files
   {
-    files: ['frontend/api/**/*.js'],
+    files: ['**/frontend/api/**/*.js'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
