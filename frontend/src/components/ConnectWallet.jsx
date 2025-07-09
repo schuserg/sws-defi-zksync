@@ -26,7 +26,7 @@ const ConnectWallet = ({ onConnect }) => {
       setAccount(window.ethereum.selectedAddress);
       onConnect(window.ethereum.selectedAddress);
     }
-  }, []);
+  }, [onConnect]);
 
   return (
     <div className="mb-4">
