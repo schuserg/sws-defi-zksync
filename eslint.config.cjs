@@ -86,6 +86,18 @@ module.exports = [
       'react/jsx-uses-vars': 'warn',
     },
   },
+  
+  // ✅ Node.js global support for API files
+  {
+    files: ['frontend/api/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.node, // 👈 Adds support for `process`, `__dirname`, etc.
+      },
+    },
+  },
 
   // ✅ Ignore generated files
   {
