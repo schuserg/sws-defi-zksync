@@ -5,7 +5,7 @@ import os
 
 app = FastAPI()
 
-# Разрешим доступ с любого домена (можно ограничить при необходимости)
+# Разрешаем доступ с любого домена
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -16,10 +16,6 @@ app.add_middleware(
 
 LOG_FILE = os.path.join(os.path.dirname(__file__), "logs", "mint_log.json")
 
-@app.get("/")
-def read_root():
-    return {"status": "SWS Analytics API running"}
-
 @app.get("/logs")
 def get_logs():
     try:
@@ -28,11 +24,4 @@ def get_logs():
         return {"logs": data}
     except Exception as e:
         return {"error": str(e)}
-
-def format_amount(value):
-    return float(value) / 1e18 if isinstance(value, int) else value
-    
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("api:app", host="0.0.0.0", port=8000)
 

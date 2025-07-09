@@ -303,6 +303,16 @@ The project includes a full-featured analytics dashboard to visualize smart cont
 * **Serverless fetch via `/api/telegram.js`**: Compatible with Vercel frontend
 * **No backend deployment required** (FastAPI/uvicorn no longer needed)
 
+## 📊 Analytics Dashboard
+
+The project includes a full-featured analytics dashboard to visualize smart contract activity on zkSync Era Mainnet.
+
+### 🧱 Built With:
+
+* **React + Recharts**: Interactive data visualization
+* **Local backend (FastAPI)**: Serves real-time event logs from `mint_log.json`
+* **No Telegram or serverless API involved**
+
 ### 📈 Dashboard Shows:
 
 * Distribution of events: `Staked`, `Claimed`, `Withdrawn`, `WithdrawnAll`
@@ -316,54 +326,45 @@ The project includes a full-featured analytics dashboard to visualize smart cont
   * Tx hash
   * Timestamp (ISO format)
 
-> ✅ Telegram bot logs events via `listener.py`
-> ✅ Events are pushed into a private group
-> ✅ Frontend reads public messages and displays them beautifully
+> ✅ Events are logged via `listener.py`
+> ✅ Logs saved into `backend/logs/mint_log.json`
+> ✅ Dashboard fetches and visualizes them locally
 
 ---
 
-### ✨ Online Access
+### ✨ Local Access
 
-Dashboard is fully live at:
+Dashboard is available at:
 
-**[https://sws-defi-zksync.vercel.app/dashboard](https://sws-defi-zksync.vercel.app/dashboard)**
+**[http://localhost:5173/dashboard](http://localhost:5173/dashboard)**
 
-You can freely switch between **Home** and **Dashboard** tabs.
-
----
-
-### ⚙️ How It Works
-
-1. `listener.py` logs on-chain events and sends formatted messages to Telegram.
-2. The frontend script `frontend/api/telegram.js` fetches the latest 20–30 messages.
-3. `Dashboard.jsx` parses and renders:
-
-   * Event distribution chart
-   * Claimed rewards chart
-   * Chronological log with icons and context
-
-> 🔐 No access to private keys or .env is required on frontend side.
-> 📡 Listener runs in background on your own server or dev machine.
+You can switch between **Home** and **Dashboard** tabs in the UI.
 
 ---
 
-### 🛠️ Optional Local Setup (Advanced)
+### ⚙️ Local Dashboard Setup
 
-To simulate full behavior locally (with FastAPI):
+To visualize events locally:
 
 ```bash
 cd backend
-uvicorn api:app --reload --port 8000
-# Open: http://localhost:8000/logs or http://localhost:8000/docs
+uvicorn api:app --reload --port 8000  # API must return logs from backend/logs/mint_log.json
 ```
 
-Then update `Dashboard.jsx`:
+Open dashboard:
+
+```bash
+http://localhost:5173/dashboard  # frontend
+http://localhost:8000/logs       # backend API
+```
+
+Ensure `Dashboard.jsx` uses:
 
 ```js
 fetch("http://localhost:8000/logs")
 ```
 
-Or fallback to static JSON from `public/logs/mint_log.json`.
+This setup fetches real-time events from your local backend (`mint_log.json`) and renders them in the dashboard. No Telegram or external services are required.
 
 ---
 

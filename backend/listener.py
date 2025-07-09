@@ -16,7 +16,10 @@ DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK")
 WEB3_PROVIDER = os.getenv("ZKSYNC_ERA_MAINNET_RPC")
 STAKING_ADDRESS = os.getenv("SWSSTAKING_ADDRESS")
 TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-TG_CHAT_ID = os.getenv("TELEGRAM_INTERNAL_CHAT_ID")
+TG_CHAT_IDS = [
+    os.getenv("TELEGRAM_INTERNAL_CHAT_ID"),
+    os.getenv("TELEGRAM_PUBLIC_CHAT_ID"),
+]
 
 # Connect to zkSync Era
 w3 = Web3(Web3.HTTPProvider(WEB3_PROVIDER))
@@ -112,11 +115,14 @@ async def main():
 
                     print(msg)
                     try:
-                        await bot.send_message(chat_id=TG_CHAT_ID, text=msg)
+                        for chat_id in TG_CHAT_IDS:
+                            if chat_id:
+                                await bot.send_message(chat_id=chat_id, text=msg)
+                                save_log(entry)
                     except Exception as tg_err:
                         print("⚠️ Telegram Error:", tg_err)
 
-                    send_discord_alert(msg)  # ⬅ Discord уведомление
+                    send_discord_alert(msg)  # ⬅ Discord notification
 
             except Exception as log_err:
                 print(f"⚠️ Log Read Error: '{event_name}'", log_err)
