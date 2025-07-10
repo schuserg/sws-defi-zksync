@@ -40,8 +40,7 @@ contract = w3.eth.contract(address=STAKING_ADDRESS, abi=abi)
 event_names = ["Staked", "Claimed", "Withdrawn", "WithdrawnAll"]
 
 # Format amounts
-def format_amount(value):
-    return float(value) / 1e18 if isinstance(value, int) else value
+from backend.utils import format_amount
 
 # Save to mint_log.json
 def save_log(entry):
