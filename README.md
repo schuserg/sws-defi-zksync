@@ -46,22 +46,31 @@ npx hardhat compile
 npm run dev  # or your frontend start script
 ```
 
-Set up `.env` file:
+---
+
+## 📄 Environment Variables
+
+This project uses both backend and frontend environment variables.  
+Frontend variables must start with `VITE_` to be accessible in React (via `import.meta.env`).
+
+### ✅ Example `.env` file:
 
 ```env
+# RPC settings
 ZKSYNC_ERA_MAINNET_RPC=https://zksync-mainnet.g.alchemy.com/v2/YOUR_KEY
 ETH_MAINNET_RPC=https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
-PRIVATE_KEY=your_wallet_private_key
+PRIVATE_KEY=your_private_key
 PUBLIC_KEY=0xYourPublicAddress
 
+# Contract addresses
 SWSTOKEN_ADDRESS=0x...
 DOLTOKEN_ADDRESS=0x...
 SWSSTAKING_ADDRESS=0x...
 
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-TELEGRAM_INTERNAL_CHAT_ID=your_internal_chat_id
-TELEGRAM_PUBLIC_CHAT_ID=
-
+# Frontend & alerts (Vite-compatible)
+VITE_TELEGRAM_BOT_TOKEN=your_bot_token
+VITE_TELEGRAM_INTERNAL_CHAT_ID=your_internal_chat_id
+VITE_TELEGRAM_PUBLIC_CHAT_ID=
 DISCORD_WEBHOOK=https://discord.com/api/webhooks/your_webhook_url
 ```
 
