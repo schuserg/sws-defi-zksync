@@ -2,7 +2,7 @@ import unittest
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from backend.api import format_amount
+from backend.listener import format_amount
 
 class TestFormatAmount(unittest.TestCase):
     def test_format_integer(self):
