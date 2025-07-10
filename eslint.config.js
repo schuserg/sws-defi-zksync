@@ -3,7 +3,7 @@ import babelParser from '@babel/eslint-parser';
 import reactPlugin from 'eslint-plugin-react';
 
 export default [
-  // ✅ Node.js global support
+  // ✅ Node.js global variables
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -31,6 +31,7 @@ export default [
         ...globals.browser,
         ...globals.node,
         process: 'readonly',
+        import: 'readonly', // required for import.meta.env support
       },
     },
     plugins: {
@@ -43,7 +44,7 @@ export default [
     },
   },
 
-  // ✅ API folder (Node.js globals)
+  // ✅ API folder (Node.js environment)
   {
     files: ['frontend/api/**/*.js'],
     languageOptions: {
@@ -52,11 +53,12 @@ export default [
       globals: {
         ...globals.node,
         process: 'readonly',
+        import: 'readonly', // required for import.meta.env support
       },
     },
   },
 
-  // ✅ All .js files
+  // ✅ General JavaScript files
   {
     files: ['**/*.js'],
     languageOptions: {
@@ -66,6 +68,7 @@ export default [
         ...globals.browser,
         ...globals.node,
         process: 'readonly',
+        import: 'readonly', // required for import.meta.env support
       },
     },
     rules: {
@@ -73,7 +76,7 @@ export default [
     },
   },
 
-  // ✅ CJS override
+  // ✅ CommonJS override
   {
     files: ['**/*.cjs'],
     languageOptions: {
