@@ -2,6 +2,17 @@ const js = require('@eslint/js');
 const globals = require('globals');
 const tseslint = require('typescript-eslint');
 
+// ✅ Global Node.js support (for process, __dirname, etc.)
+{
+  languageOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    globals: {
+      ...globals.node,
+    },
+  },
+}
+
 // ✅ JSX support
 const babelParser = require('@babel/eslint-parser');
 const reactPlugin = require('eslint-plugin-react');

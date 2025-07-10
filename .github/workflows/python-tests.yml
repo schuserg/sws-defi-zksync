@@ -21,7 +21,7 @@ jobs:
 
     - name: Run tests
       run: |
-        export PYTHONPATH="${{ github.workspace }}"
-        pytest backend/tests
+        export PYTHONPATH=$GITHUB_WORKSPACE
+        pytest
 
 
